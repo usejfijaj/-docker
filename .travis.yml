@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+    - docker
+
+before_install:
+    - docker build -t uka - Dockerfile.dev
+
+script:
+    - docker run uka npm run test -- --coverage
