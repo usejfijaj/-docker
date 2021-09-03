@@ -8,6 +8,6 @@ before_install:
     - docker build -t uka/travis -f Dockerfile.dev .
 #test commit
 script:
-    - docker run uka/travis npm run test -- --coverage
+    - docker run -e CI=true uka/travis npm run test -- --watchAll=false
 
 
