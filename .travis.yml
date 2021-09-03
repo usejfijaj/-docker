@@ -8,3 +8,6 @@ before_install:
 #test commit
 script:
     - docker run uka/travis npm run test -- --coverage
+
+install: 
+    - travis_wait mvn install
